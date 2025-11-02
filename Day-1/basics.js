@@ -9,11 +9,11 @@ if(age>18){
 
 // tenary operator
 let result1= age>18 ? "adult" :"not adult";
-console.log(result1);
+console.log(result1);//
 
 
 // array 
-
+ 
 let array = ["shreya", "varsha","yash","kalyani"];
 
 for(let i=0;i<array.length;i++){
@@ -25,7 +25,7 @@ for(let i=0;i<array.length;i++){
 let user = [{
     name:"shreya",
     age : 22,
-    address: {
+    address: {     
         city:"Nagpur",
         country:"India"
     }
