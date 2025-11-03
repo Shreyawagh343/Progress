@@ -13,16 +13,16 @@ let fs = new promiseHooks()
 
 fs.cleanFile("a.txt","utf-8").then(callback);
 
-// function random(r) {
-//     r();
-// }
+function random(r) {
+    r();
+}
 
-// let p = new Promise(random);
+let p = new Promise(random);
 
-// function callback(){
-//     console.log("it succsed");
-// }
-// p.then(callback)
+function callback(){
+    console.log("it succsed");
+}
+p.then(callback)
 
 
 

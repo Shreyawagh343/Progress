@@ -1,0 +1,105 @@
+.nav {
+    background-color: black;
+    color: white;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.first {
+    display: flex;
+}
+.firstheading {
+    font-size: 10px;
+    text-transform: capitalize;
+}
+.first ul {
+    list-style: none;
+    display: flex;
+}
+.first li {
+    padding-left: 1rem;
+    text-transform: capitalize;
+    color: grey;
+}
+.second {
+    display: flex;
+}
+.second button {
+    width: 8rem;
+    height: 1.8rem;
+    background-color: rgb(49, 49, 215);
+    color: white;
+    border: none;
+    border-radius: 5px;
+   margin-left: 0.8rem;
+}
+.main {
+ display: flex;
+ padding-top: 4rem;
+ background-color: rgb(20, 20, 20);
+ color: white;
+ padding-bottom: 3rem;
+}
+.img img {
+    height: 23rem;
+    width: 35rem;
+}
+.para {
+    padding-left: 19rem;
+    padding-right: 5rem;
+}
+.para p  {
+    font-size: 1.2rem;
+    color: grey;
+}
+.para h1 {
+    font-size: 3rem;
+}
+.para h2 {
+    font-size: 3rem;
+    margin-top: -2.5rem;
+}
+.para button {
+    width: 12rem;
+    height: 2rem;
+    background-color: rgb(49, 49, 215);
+    color: white;
+    border: none;
+    border-radius: 5px;
+   margin-top: -2.5rem;
+}
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    padding-left: 19rem;
+}
+.para1 h1 {
+ font-size:  1.6rem;
+ text-transform: capitalize;
+}
+.para1 p {
+    font-size: 1.2rem;
+    height: 4rem;
+    color: gray;
+}
+.logos {
+    display: flex;
+    padding-left: 4rem;
+}
+.logo1 p {
+    font-size: 1rem;
+    padding-right: 10rem;
+}
+.logo2 p {
+    font-size: 1rem;
+    padding-right: 10rem;
+}
+.logo3 p {
+    font-size: 1rem;
+    padding-right: 6rem;
+}
+
