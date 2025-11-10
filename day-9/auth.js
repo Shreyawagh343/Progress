@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
+const jwt = require('jsonwebtoken');
 app.use(express.json());
 
+const JWT_SECERT = "gdsgfdvcdjsvcjdsvc";
 let users = [];
 
 // token generate
-function generateToken()  {
-    let token = '';
-    let options = ['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','v','w','x','y','z','1','2','3','4','5','6','7','8'];
-    for(let i=0;i<=32;i++){
-        token +=Math.floor(Math.random()*options.length)
-    }
-    return token;
+// function generateToken()  {
+//     let token = '';
+//     let options = ['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','v','w','x','y','z','1','2','3','4','5','6','7','8'];
+//     for(let i=0;i<=32;i++){
+//         token +=Math.floor(Math.random()*options.length)
+//     }
+//     return token;
     
-}
+// }
 
 app.post("/signup",function(req,res){
     const username = req.body.username;
@@ -37,7 +39,9 @@ app.post("/signin",function(req,res){
 
     const findUser = users.find(u => u.username==username && u.password == password);
     if(findUser){
-        const token = generateToken();
+        const token = jwt.sign({
+            username: username
+        },JWT_SECERT);
         findUser.token = token;
         res.json({
             token:token
@@ -48,8 +52,10 @@ app.post("/signin",function(req,res){
 })
 // to check the token to access any route
 app.get("/me",function(req,res){
-    let token = req.header.token;
-    let user = users.find(u=> u.token ==token);
+    let token = req.headers.token;
+    let beconinf = jwt.verify(token , JWT_SECERT);
+    let username = beconinf.username;
+    let user = users.find(u=> u.username == username);
 
     if(user){
         res.json({
