@@ -5,6 +5,21 @@ const JWT_SECERT = "SHREYAILOVEYOU";
 app.use(express.json());
 
 const users = [];
+
+function auth(req,res,next){
+    const token = req.headers.token;
+    const findToken = jwt.verify(token , JWT_SECERT);
+    if(findToken.username){
+        req.username =findToken.username;
+        next();
+    }else {
+        res.json({
+            msg: " you have to login!!"
+        })
+    }
+
+
+}
 app.post("/signup",function(req,res){
     const username = req.body.username;
     const password = req.body.password;
@@ -35,12 +50,9 @@ app.post("/signin",function(req,res){
 
     }
 })
-app.get("/me",function(req,res){
-    const token = req.headers.token;
-    const findToken = jwt.verify(token , JWT_SECERT);
-    const username = findToken.username;
+app.get("/me",auth ,function(req,res){
 
-    const user = users.find(u=> u.username == username)
+    const user = users.find(u=> u.username == req.username)
 
     if(user){
         res.json({
