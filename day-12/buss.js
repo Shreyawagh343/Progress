@@ -6,4 +6,9 @@ app.get("/",function(req,res){
         msg:"shreya you have to do it"
     })
 })
+app.get("/",function(req,res){
+    res.json({
+        msg:"shreya you have to do it"
+    })
+})
 app.listen(3000);
