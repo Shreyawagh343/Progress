@@ -11,7 +11,9 @@ function middlewareFu(req,res,next){
             msg:"you are under age"
         })
     }
-}
+} 
+
+
 
 app.use(middlewareFu);
 app.get("/",function(req,res){
