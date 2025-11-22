@@ -1,7 +1,5 @@
-// import { useState } from "react"
-// import Topbar from "./Components/Topbar"
-// import Leauseeffect from "./Components/leauseeffect"
-import Childprop from "./Components/Childprop"
+import Lists from "./Components/Lists"
+
 
 function App() {
   // const [posts , setposts] = useState([{
@@ -20,6 +18,17 @@ function App() {
   //       username = {post.username}
   //       password={post.password}        />)
 
+  // const users = [{
+  //       title:"shreya",
+  //       done:false
+  //   },{
+
+  //       title:"varsha",
+  //       done:true
+  //   }]
+
+  //   users.map((todo)=> <Topbar title={todo.title}  dono={todo.dono}/>)
+
   return (
     <>
     {/* <div style={{backgroundColor:"grey" , height:"10rem" , width:"30%", color:"white"}}>
@@ -27,8 +36,8 @@ function App() {
     <div>{postman}</div>
     </div>
      */}
-     {/* <Leauseeffect/> */}
-     <Childprop>
+     <Lists/>
+     {/* <Childprop>
       <div style={{color:"black"}}>
         <input type="text" />
       </div>
@@ -38,8 +47,7 @@ function App() {
         <h1>hi there</h1>
         <p>shreya is great</p>
       </div>
-    </Childprop>
-
+    </Childprop> */}
     </>
   )
 }
