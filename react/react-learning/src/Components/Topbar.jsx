@@ -1,10 +1,12 @@
 
 
+
 function Topbar({username , password}) {
     // const [ invisble , setinvisble] = useState(false)
   return (
     <>
-    <div style={{backgroundColor:"grey" , height:"10rem" , width:"30%", color:"white"}}>
+
+    {/* <div style={{backgroundColor:"grey" , height:"10rem" , width:"30%", color:"white"}}>
     
     <div>
     {<h1>{username}</h1>}
@@ -14,7 +16,7 @@ function Topbar({username , password}) {
         <div>
             <p>gcihcgicbiewbfciewbufcbewuvbcfuveducvvuedcvuevdcdc</p>
         </div>
-        </div>
+        </div> */}
 
         
         {/* <button onClick={()=>{
