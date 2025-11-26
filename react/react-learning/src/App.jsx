@@ -1,8 +1,12 @@
-import Lists from "./Components/Lists"
-import Useref from "./Components/Useref"
+
+import Usecase from "./Components/usecase"
+// import { useFetch } from "./Components/usecount"
+
 
 
 function App() {
+
+  // const getdata = useFetch("https://catfact.ninja/fact")
   // const [posts , setposts] = useState([{
   //       username:"shreya",
   //       password : "12345"
@@ -49,7 +53,11 @@ function App() {
         <p>shreya is great</p>
       </div>
     </Childprop> */}
-    <Useref/>
+    {/* <Useref/> */}
+    <Usecase/>
+    {/* <div>{getdata.fact}</div> */}
+
+  
     </>
   )
 }

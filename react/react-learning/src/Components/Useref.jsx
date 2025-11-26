@@ -1,24 +1,14 @@
-import React, { useEffect,useState } from 'react'
+import { useCounter } from "./usecount";
 
+ 
 function Useref() {
-    const [value , setvalue]= useState(1);
-
-    useEffect(function(){
-        setInterval(function(){
-            setvalue(c => c+1);
-        },1000)
-    },[])
-       
-
-    function stopclock(){
-        clearInterval(value);
-    }
+    const { count , increaseCount} = useCounter();
   return (
     <div>
-        {value}
+        {count}
         <div style={{display:"flex"}}
         >
-            
+          <button onClick={increaseCount}>increase</button>  
         </div>
     </div>
   )
