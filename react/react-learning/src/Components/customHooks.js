@@ -33,11 +33,11 @@ export function useFetch(url){
 }
 
 export function usePrev(value){
-     const ref = useRef();
+    const ref = useRef();
 
-     useEffect(()=>{
-        ref.current = value;
-     },[value])
+    useEffect(()=>{
+        ref.current = value
+    },[value])
 
-     return ref.current;
+    return ref.current
 }
