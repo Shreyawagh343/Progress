@@ -1,6 +1,9 @@
 
-import Usecase from "./Components/usecase"
+// import Usecase from "./Components/usecase"
 // import { useFetch } from "./Components/usecount"
+
+import Project1 from "./tailwind/project1"
+
 
 
 
@@ -54,8 +57,11 @@ function App() {
       </div>
     </Childprop> */}
     {/* <Useref/> */}
-    <Usecase/>
+    {/* <Usecase/> */}
     {/* <div>{getdata.fact}</div> */}
+<Project1/>
+    
+    
 
   
     </>
